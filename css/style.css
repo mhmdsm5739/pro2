@@ -1,0 +1,336 @@
+:root{
+    --main-color: #d3ad7f;
+    --black:#13131a;
+    --bg: #010103;
+    --border:0.1rem solid rgba(255,255,255,0.3);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration:rgb(12, 225, 233) ;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+body{
+    height: 3500px;
+    font-family: "pt-sans",sans-serif;
+    background: var(--bg);
+
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.header-contents{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    top: 0; left: 0; right:0;
+    z-index: 10;
+}
+.logo{
+    height: 6rem;
+    flex: 1;
+} 
+nav{
+    flex: 3;
+    text-align: center;
+}
+nav .list-coffe a{
+    font-size: 1.2rem;
+    color: #fff;
+}
+nav .list-coffe .link:hover{
+   color: var(--main-color);
+   border-bottom: .07rem solid var(--main-color);
+   padding-bottom: .5rem ;
+}
+.list-coffe{
+    list-style: none;
+}
+.header-contents ul li{
+    display: inline-block;
+}
+.li1{
+    position: relative;
+} 
+a{
+    text-decoration: none;
+}
+.header-contents nav ul li .link{
+    padding: 10px 20px;
+    display: block;
+    position: relative;
+} 
+.list-menu{
+    display: table-cell;
+    text-align: left;
+}
+.menu ul li:first-child a {
+    display: block;
+    border-bottom: 1px dotted brown;
+    margin-bottom: 10px;
+}
+.menu {
+    position: absolute;
+    width: 450px;
+    border: 2px solid rgb(85, 54, 54);
+    background-color: #d8be9f;
+    padding: 15px;
+    margin-top: 5px;
+    transform: scale(0);
+    transition: transform 0.5s , visibility .5s;
+}
+.li1:hover .menu  {
+    transform: scale(1);
+    visibility: visible;
+    
+}
+.header-contents .icon {
+    flex: 1;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.header-contents .icon i{
+    padding: 0 10px;
+}
+
+.section-header{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fff;
+}
+.section-header h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.section-header .line{
+    width: 100px;
+    margin: auto;
+    height: 2px;
+    background-color: var(--main-color);
+}
+.bon{
+    padding: 40px 0;
+}
+.bon-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: 0; left: 0; right:0;
+    z-index: 1000;
+}
+.bon-item img{
+    width: 300px;
+    height: 400px;
+    
+}
+.bon-item{
+    position: relative;
+    color: #fff;
+}
+.bon-item .icona {
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+    color: #fff;
+    text-align: center;
+    display: block;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.1;
+}
+.bon-item:hover .icona {
+    visibility: visible;
+    opacity: 1;
+}
+.about{
+    display: flex;
+    margin: 40px 0;
+
+}
+
+.about-desc {
+    flex: 2;
+    color: #f7f3ef;
+    padding: 20px;
+    width: 400px;
+    height: 300px;
+    background: var(--black);
+    position: relative;
+}
+.about-desc .top {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+.about-desc .top .icon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 50px;
+    color: var(--main-color);
+}
+.about-desc .bullets {
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+.about-desc .bullets span{
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background: var(--main-color);
+    margin-left: 10px;
+}
+.about-item{
+    background-image: url(../image/cup-coffee\ \(1\).jpg);
+    background-size: cover;
+    margin: 0 20px;
+    transition: transform 0.5s;
+    flex: 1;
+
+}
+.about-item .about-item-info{
+    color: #fff;
+    padding: 30px;
+}
+.about-item:hover{
+    transform: scale(1.1);
+} 
+.sprite{
+    display: flex;
+    margin-bottom: 55px;
+    color: #fff;
+}
+.sprite-item {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid brown;
+}
+.sprite-icon {
+    background-image: url(../image/mo232.png);
+    height: 55px;
+    background-repeat: no-repeat;
+}
+.icon-1 {
+    background-position: center 5px;
+    transition: all .5s;
+}
+.sprite-item:hover .icon-1 {
+    background-position: center -80px;
+}
+.icon-2 {
+    background-position: center -180px;
+    transition: all .5s;
+}
+.sprite-item:hover .icon-2 {
+    background-position: center -270px;
+}
+.icon-3 {
+    background-position: center -366px;
+    transition: all .5s;
+}
+.sprite-item:hover .icon-3 {
+    background-position: center -460px;
+}
+.icon-4 {
+    background-position: center -549px;
+    transition: all .5s;
+}
+.sprite-item:hover .icon-4 {
+    background-position: center -640px;
+}
+.icon-5 {
+    background-position: center -734px;
+    transition: all .5s;
+}
+.sprite-item:hover .icon-5 {
+    background-position: center -830px;
+}
+.product{
+    padding: 40px 0;
+}
+.product-list{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    color: #fff;
+}
+.product-list li{
+    margin: 10px 30px;
+}
+.product-items{
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    
+}
+.product-img img{
+    width: 350px;
+    height: 25rem;
+}
+.product-img{
+    position: relative;
+    border: var(--border);
+    text-align: center;
+    color: #fff;
+}
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 61px ;
+    transform: scalex(0);
+    opacity: 0.9;
+    transition: transform 0.2s;
+}
+.product-overlay ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+.product-icon li{
+    list-style: none;
+    margin: 0 8px;
+}
+
+.product-item:hover .product-overlay{
+    transform: scalex(1);
+}
+.product-overlay ul li i{
+   font-size:20px ;
+   color: #fff;
+   line-height: 40px;
+    transition: 0.6s;
+}
+.product-overlay ul li a{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(117, 55, 55);
+    text-align: center;
+}
+.product-info i{
+    color: yellow;
+}
+.product-info span{
+    display: block;
+    margin: 5px 0;
+}
+.product-info h3{
+    margin-bottom: 20px;
+}
